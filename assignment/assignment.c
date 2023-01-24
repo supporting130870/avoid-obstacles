@@ -63,11 +63,11 @@ void obstacle(int obs_x,int obs_y)
     GotoXY(obs_x, obs_y+1);
     printf("   \n");
     GotoXY(obs_x, obs_y+2);
-    printf("   \n");
+    printf(" ***\n");
     GotoXY(obs_x, obs_y+3);
-    printf("   *\n");
+    printf(" ***\n");
     GotoXY(obs_x, obs_y+4);
-    printf("   *\n");
+    printf(" ***\n");
 }
 
 void draw_backgrounds()
@@ -162,12 +162,13 @@ int main(void)
             start = clock();    //시작시간 초기화
         }
 
-        GotoXY(22, 0);
-        printf("Score : %d ", score);
+
         system("cls");    //clear
         draw_backgrounds();
         object1(obj_y);
         obstacle(obs_x, obs_y);
+        GotoXY(0, 0);
+        printf("Score : %d ", score);
         Sleep(100);
     }
   
